@@ -1,0 +1,26 @@
+{
+  "name": "overvue",
+  "version": "0.0.0",
+  "description": "A library for quickly building Single Page Apps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasjames/overvue.git"
+  },
+  "keywords": [
+    "reusable",
+    "ui"
+  ],
+  "author": "Elias Carlston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliasjames/overvue/issues"
+  },
+  "homepage": "https://github.com/eliasjames/overvue#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
