@@ -8,10 +8,32 @@ h1 {
   font-weight: 100;
   margin-top: 0;
 }
-ol {
+ul {
   padding-inline-start: 10%;
 }
 p, li {
   font-family: monospace;
   font-size: 1.5em;
+}
+/* layout */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  width: 33%;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+main nav {
+  flex-basis: 33%;
+}
+main p {
+  flex-basis: 66%;
 }
