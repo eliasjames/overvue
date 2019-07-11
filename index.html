@@ -15,12 +15,14 @@
   <body>
     <div id="app">
       <header>
-        <h1>{{ message }}</h1>
+        <h1>{{ siteName }}</h1>
         <nav>
           <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li
+              v-for="eachOption in nav.options"
+            >
+              {{ eachOption.name }}
+            </li>
           </ul>
         </nav>
       </header>
