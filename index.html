@@ -19,9 +19,13 @@
         <nav>
           <ul>
             <li
-              v-for="eachOption in nav.options"
+              v-for="eachOption in topnav.options"
             >
-              {{ eachOption.name }}
+              <a
+                @click="selectSubMenu(eachOption.menuName)"
+              >
+                {{ eachOption.menuName }}
+              </a>
             </li>
           </ul>
         </nav>
@@ -29,9 +33,11 @@
       <main>
         <nav>
           <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li
+              v-for="eachSubMenu in getCurrentSubMenu"
+            >
+              {{ eachSubMenu }}
+            </li>
           </ul>
         </nav>
         <p>
