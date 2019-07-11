@@ -1,16 +1,23 @@
+window.overVue = {
+  app: undefined,
+  components: {}
+};
+
 addEventListener('load', ()=>{
-  window.overVue = new Vue({
+  window.overVue.app = new Vue({
     el: '#app',
+    components: overVue.components,
     computed: {
       getCurrentSubMenu() {
         const menu = this.$data.topnav.options.find(e => {
-          return e.menuName === (this.$data.currentSubMenu || 'one');
+          return e.menuName === (this.$data.currentSubMenu);
         })
         return menu.nav.options;
       }
     },
     data: {
-      currentSubMenu: undefined,
+      currentContent: 'A',
+      currentSubMenu: 'one',
       siteName: 'overvue',
       topnav: {
         options: [
@@ -48,6 +55,9 @@ addEventListener('load', ()=>{
       }
     },
     methods: {
+      selectContent(contentName) {
+        this.$data.currentContent = contentName;
+      },
       selectSubMenu(menuName) {
         this.$data.currentSubMenu = menuName;
       }

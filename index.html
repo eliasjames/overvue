@@ -11,6 +11,7 @@
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="src/index.js"></script>
+    <script src="src/components.js"></script>
   </head>
   <body>
     <div id="app">
@@ -36,13 +37,18 @@
             <li
               v-for="eachSubMenu in getCurrentSubMenu"
             >
-              {{ eachSubMenu }}
+              <a
+                @click="selectContent(eachSubMenu)"
+              >
+                {{ eachSubMenu }}
+              </a>
             </li>
           </ul>
         </nav>
-        <p>
-          A JavaScript library for quickly building Single Page Apps
-        </p>
+        <component
+          v-bind:is="currentContent"
+        >
+        </component>
       </main>
     </div>
   </body>
