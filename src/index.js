@@ -1,12 +1,9 @@
-window.overVue = {
-  app: undefined,
-  components: {}
-};
+const appComponents = require('./components.js');
 
 addEventListener('load', ()=>{
-  window.overVue.app = new Vue({
+  new Vue({
     el: '#app',
-    components: overVue.components,
+    components: appComponents,
     computed: {
       getCurrentSubMenu() {
         const menu = this.$data.topnav.options.find(e => {

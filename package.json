@@ -4,7 +4,7 @@
   "description": "A JavaScript library for quickly building Single Page Apps",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "browserify src/index.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eliasjames/overvue/issues"
   },
-  "homepage": "https://github.com/eliasjames/overvue#readme"
+  "homepage": "https://github.com/eliasjames/overvue#readme",
+  "dependencies": {
+    "browserify": "^16.3.0"
+  }
 }
