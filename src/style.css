@@ -38,3 +38,11 @@ main nav {
 main p {
   flex-basis: 66%;
 }
+main nav li {
+  list-style-type: none;
+}
+header li.active {
+  color: red;
+  list-style-type: none;
+  text-decoration: underline;
+}

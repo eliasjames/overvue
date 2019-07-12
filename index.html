@@ -21,9 +21,10 @@
           <ul>
             <li
               v-for="eachOption in topnav.options"
+              :class="{ active: eachOption.active }"
             >
               <a
-                @click="selectSubMenu(eachOption.menuName)"
+                @click="handleTopnavClick(eachOption.menuName)"
               >
                 {{ eachOption.menuName }}
               </a>

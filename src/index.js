@@ -22,6 +22,7 @@ addEventListener('load', ()=>{
       topnav: {
         options: [
           {
+            active: true,
             menuName: 'one',
             nav: {
               options: [
@@ -55,6 +56,12 @@ addEventListener('load', ()=>{
       }
     },
     methods: {
+      handleTopnavClick(menuName) {
+        this.selectSubMenu(menuName);
+        const currentNav = this.$data.topnav.options.find(e => e.menuName === menuName);
+        this.$data.topnav.options.forEach(e => e.active = false);
+        currentNav.active = true;
+      },
       selectContent(contentName) {
         this.$data.currentContent = contentName;
       },
