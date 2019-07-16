@@ -4,7 +4,7 @@
   "description": "A JavaScript library for quickly building Single Page Apps",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/index.js -o bundle.js"
+    "build": "browserify src/index.js -o dist/bundle.js"
   },
   "repository": {
     "type": "git",
