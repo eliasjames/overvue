@@ -2,7 +2,7 @@ const appComponents = require('./components.js');
 
 addEventListener('load', ()=>{
   new Vue({
-    el: '#app',
+    el: '#overvue',
     components: appComponents,
     computed: {
       getCurrentSubMenu() {
