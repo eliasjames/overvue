@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/index.js -o dist/bundle.js",
-    "serve": "watchify src/index.js -o dist/bundle.js"
+    "serve": "watchify src/index.js -o dist/bundle.js",
+    "start": "npm run serve"
   },
   "repository": {
     "type": "git",
